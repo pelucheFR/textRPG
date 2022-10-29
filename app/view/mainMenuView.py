@@ -9,5 +9,3 @@ def mainMenu():
             print(choice)
 
     return input('What is your select ?')
-
-

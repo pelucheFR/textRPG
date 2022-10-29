@@ -1,3 +1,5 @@
-from controller import mainMenuController
+from resources.title import showTitle
+from app.controller.mainMenuController import mainMenuController
 
-mainMenuController.mainMenuController()
+showTitle()
+mainMenuController()
