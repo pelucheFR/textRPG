@@ -1,6 +1,7 @@
 from app.view.errorMessage import errorMessageView
 from app.view.mainMenuView import mainMenu
 from app.controller.characterCreationController import characterCreatorController
+from app.controller.adventureController import adventureMenuController
 
 class mainMenuController:
     def __init__(self):
@@ -14,15 +15,14 @@ class mainMenuController:
             self.activePlayerChoice(selection)
         else:
             errorMessageView('Input Invalid')
-            self.index()
+            self.runMainMenu()
     
     def activePlayerChoice(self,choice):
         match choice:
-            case 1:
-                characterCreator = characterCreatorController()
-                characterCreator.runCharacterCreation()
-            case 2:
-                print('TEST: Controle OK')
-
-            case 3:
-                print('TEST: Controle OK')
+            case 1: # New Game
+                characterCreatorController().runCharacterCreation()
+                adventureMenuController().playAdventure()
+            case 2: # Continue
+                adventureMenuController().playAdventure()
+            case 3: # Leave
+                print("You leaving the game...")

@@ -11,8 +11,7 @@ class characterCreatorController:
         jsonStr = None
 
         name = characterCreatorMenu()
-        player = Player(name)
-        jsonStr = json.dumps(player.__dict__)
+        jsonStr = json.dumps(Player(name).__dict__)
         with open("data/save.json", "w") as outfile:
             outfile.write(jsonStr)
         

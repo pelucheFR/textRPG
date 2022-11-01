@@ -4,3 +4,4 @@ class Player:
         self.name = name
         self.level = 1
         self.gold = 0
+        self.health = 10
