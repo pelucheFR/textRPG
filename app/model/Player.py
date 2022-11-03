@@ -1,7 +1,7 @@
 class Player:
-
-    def __init__(self,name):
-        self.name = name
-        self.level = 1
-        self.gold = 0
-        self.health = 10
+    def __init__(self, dict):
+        self.name = dict['name']
+        self.level = dict['level']
+        self.gold = dict['gold']
+        self.health = dict['health']
+        self.experience = dict['experience']
