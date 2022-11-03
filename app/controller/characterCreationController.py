@@ -1,4 +1,5 @@
 from app.view.characterCreatorView import characterCreatorMenu
+from app.controller.adventureController import adventureMenuController
 from app.model.Player import Player
 import json
 
@@ -14,4 +15,3 @@ class characterCreatorController:
         jsonStr = json.dumps(Player(name).__dict__)
         with open("data/save.json", "w") as outfile:
             outfile.write(jsonStr)
-        
