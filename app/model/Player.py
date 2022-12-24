@@ -1,9 +1,9 @@
 class Player:
-    def __init__(self, nom, niveau, force, agilite, intelligence):
-        self.name = nom
-        self.level = niveau
+    def __init__(self, name, level, force, agility, intelligence):
+        self.name = name
+        self.level = level
         self.force = force
-        self.agility = agilite
+        self.agility = agility
         self.intelligence = intelligence
         self.health = 10
         
@@ -16,8 +16,3 @@ class Player:
         heals = self.intelligence * 2
         cible.vie += heals
         print(f"{self.name} soigne {cible.name} et lui redonne {heals} points de vie")
-
-    def __init__(self,name):
-        self.name = name
-        self.level = 1
-        self.gold = 0
