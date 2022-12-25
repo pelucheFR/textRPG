@@ -5,7 +5,7 @@ import json
 
 def newGameController():
     dataFromView = characterCreator()
-    player = Player(dataFromView, 1, 2, 2, 2)
+    player = Player(dataFromView, 1, 2, 2, 2,10)
     jsonification = json.dumps(player.__dict__)
     with open("data/save.json", "w") as f:
         f.write(jsonification)
